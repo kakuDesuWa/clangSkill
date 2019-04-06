@@ -21,8 +21,9 @@ int main() {
 
 int func1(int a[], int n) {
   int i, sum;
-
+  // Important: Do not use uninitialize variable.
   sum = 0;
+
   for (i = 0; i < n; i++) {
     sum += a[i];
   }
@@ -31,11 +32,10 @@ int func1(int a[], int n) {
 
 int func2(int a[], int n) {
   int *p, sum;
-  p = a;
-
   // Important: Do not use uninitialize variable.
   sum = 0;
-  for (; p < a + n; p++) {
+
+  for (p = a; p < a + n; p++) {
     sum += *p;
     printf("current element is %d, sum is %d\n", *p, sum);
   }
