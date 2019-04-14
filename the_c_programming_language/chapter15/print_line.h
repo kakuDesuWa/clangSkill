@@ -2,7 +2,7 @@
 //  filename.c
 //  clangSkill
 //
-//  Created by kaku on 201x/xx/xx.
+//  Created by kaku on 2019/04/14.
 //  Copyright © 2019 kaku. All rights reserved.
 //
 #include <stdio.h>
