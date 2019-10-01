@@ -24,7 +24,8 @@ class PrintFunc {
 };
 
 void PrintFunc::show_me() {
-    cout << "hello, c++ world\n";
+    cout << "hello, c++ world" << endl;
+    cout << endl;
     cout << name;
     cout << "\t";
     cout << age;
