@@ -26,8 +26,8 @@ int main() {
 
   // for loop
   printf("\tfor loop\n");
-  for (; i < j + 5; i++) {
-    printf("current i: %10d j + 5: %10d\n", i, j + 5);
+  for (int k = 0; k < j + 5; k++) {
+    printf("current k: %10d j + 5: %10d\n", k, j + 5);
   }
 
   // do while loop
