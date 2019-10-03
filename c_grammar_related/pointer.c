@@ -28,4 +28,10 @@ int main() {
     int *p = &array_var[0];
     printf("A pointer to `int` address:  %p\n", p);
     printf("A pointer to `int` size:  %lu\n", sizeof(p));
+
+    int *p2 = array_var;
+    printf("A pointer to `int` address:  %p\n", p2);
+    printf("A pointer to `int` size:  %lu\n", sizeof(p2));
+
+    printf("A pointer(array name) size:  %lu\n", sizeof(array_var));
 }
