@@ -13,21 +13,32 @@
 #define PRINT_CHR(c) printf(#c ": %c\n", c)
 #define PRINT_STR(s) printf(#s ": %s\n", s)
 
+struct Person {
+    char name[100];
+    int age;
+} p1 = {"kaku", 18}, p2;
+
+struct Person show_struct(struct Person);
 
 int main() {
-    struct Person {
-        char name[100];
-        int age;
-    } p1 = {"kaku", 18}, p2;
+    show_struct(p1);
+    strcpy(p1.name, "gjs");
 
-    printf("struct Person: p1.name = %s, p1.age = %d\n", p1.name, p1.age);
-
-    strcpy(p1.name, "kaku");
-    p2.age = 18;
-    printf("struct Person: p2.name = %s, p2.age = %d\n", p2.name, p2.age);
+    // p2.age = 18;
+    p2 = show_struct(p1);
+    show_struct(p2);
 
     struct Person *p;
     p = &p1;
     printf("struct Person by pointer: p->name = %s, p->age = %d\n", p->name, p->age);
     printf("struct Person by pointer: (*p).name = %s, (*p).age = %d\n", (*p).name, (*p).age);
+}
+
+
+struct Person show_struct(struct Person p) {
+    printf("struct Persion:\n");
+    PRINT_STR(p.name);
+    PRINT_INT(p.age);
+
+    return p;
 }
