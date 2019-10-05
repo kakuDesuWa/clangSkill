@@ -18,6 +18,9 @@ Stock::Stock(const std::string & co, int n, double pr) {
     total_val = n * pr;
 }
 
+// Reload constructor function, this should not be used with default arguments constructor!
+// Stock::Stock() {}
+
 // Deconstructor function
 Stock::~Stock() {
     std::cout << "Bey ~ " << company << std::endl;

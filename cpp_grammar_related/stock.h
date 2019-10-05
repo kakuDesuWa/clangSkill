@@ -22,6 +22,8 @@ class Stock {
 
 public:
     Stock(const std::string & co = "No company", int n = 0, double pr = 0.0);
+    // Reload constructor function, this should not be used with default arguments constructor!
+    // Stock();
     ~Stock();
     void show() const;
     void acquire(const std::string & co, int n, double pr);
