@@ -23,6 +23,7 @@ class Stock {
 public:
     Stock(const std::string & co = "No company", int n = 0, double pr = 0.0);
     ~Stock();
-    void show();
+    void show() const;
     void acquire(const std::string & co, int n, double pr);
+    const Stock & richer(const Stock & s) const;  // 注意每一个 const 的用途 :(
 };

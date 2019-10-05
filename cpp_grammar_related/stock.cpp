@@ -10,6 +10,7 @@
 // #include <string>
 #include "stock.h"
 
+// Constructor function
 Stock::Stock(const std::string & co, int n, double pr) {
     company = co;
     shares = n;
@@ -17,10 +18,12 @@ Stock::Stock(const std::string & co, int n, double pr) {
     total_val = n * pr;
 }
 
+// Deconstructor function
 Stock::~Stock() {
     std::cout << "Bey ~ " << company << std::endl;
 }
 
+// Init or re-set Stock object attributes
 void Stock::acquire(const std::string & co, int n, double pr) {
     company = co;
     shares = n;
@@ -28,7 +31,8 @@ void Stock::acquire(const std::string & co, int n, double pr) {
     total_val = n * pr;
 }
 
-void Stock::show() {
+// Display Stock object
+void Stock::show() const {
     std::cout << "Hi, You position detail:\n"
          << "\tcompany:\t"
          << company
@@ -42,4 +46,14 @@ void Stock::show() {
          << "\ttotal_val\t"
          << total_val
          << std::endl;
+}
+
+// Compare and return the object that total_val greater.
+const Stock & Stock::richer(const Stock & s) const {
+    // this->attribute is similar to access a pointer to struct.
+    if (s.total_val > this->total_val) {
+        return s;
+    }
+
+    return *this;
 }
