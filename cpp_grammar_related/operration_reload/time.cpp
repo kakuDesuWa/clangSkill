@@ -6,7 +6,7 @@
 //  Copyright © 2019 kaku. All rights reserved.
 //
 
-#include <stdio.h>
+#include <stdio.h>  // or <cstdio>
 #include <iostream>
 #include <string>
 
